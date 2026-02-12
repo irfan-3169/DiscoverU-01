@@ -1,0 +1,26 @@
+table,tr,td{
+         background-color: rgb(24, 23, 23);
+            color: rgb(253, 250, 250);
+            border-color: rgb(167, 149, 118);
+            border-radius: 20px;
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flexbox;
+            margin-right: 20px;
+            padding: 8px;
+            align-items: center;
+}
+.one:hover{
+   background-color: rgb(137, 137, 138);
+   text-decoration: wavy;
+
+}
+.two:hover{
+    background-color: rgb(18, 63, 212);
+    text-decoration:  wavy;
+}
+h1{
+    font-variant: inherit;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color:rgb(41, 41, 41);
+
+}

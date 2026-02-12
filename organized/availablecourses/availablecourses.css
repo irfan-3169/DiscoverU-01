@@ -1,0 +1,62 @@
+.box {
+    background-color: #f0f8ff;
+    border: 8px;
+    border-style: ridge;
+    border-color: black;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 60px;
+    display: inline-block;
+    width: 250px;
+    text-align: center;
+    color: rgb(54, 54, 54);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-left: 20px;
+    padding-left: 20px;
+    padding-top: 10px
+}
+.para{
+    font-size: medium;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: justify;
+    margin: 10px;
+    text-decoration: none;
+    color: rgb(24, 24, 26);
+    
+}
+.a:hover{
+    font-size: large;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    margin: 10px;
+    text-decoration: none;
+    color: rgb(221, 217, 217);
+    border: 5px solid rgb(225, 230, 227);
+    border-style: ridge;
+    padding: 2px;
+    border-radius: 20px;
+    background-color: rgb(61, 58, 14);
+    animation-name: inherit;
+}
+a{
+    font-weight: 20px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-decoration: none;
+    color: rgb(250, 245, 245);
+    border-color: black;
+    border-radius:13px;
+    background-color: rgb(12, 12, 12);
+    padding: 5px;
+
+}
+.HOME:hover{
+    background: white;
+    color:black
+    
+}
+.HOME{
+    border: black;
+    border-radius: 20px;
+    border-style: ridge;
+    margin-right: 40px;
+}

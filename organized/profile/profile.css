@@ -1,0 +1,35 @@
+ table,tr,td,a{
+    background-color: rgb(24, 23, 23);
+            color: rgb(212, 208, 208);
+            border-color: rgb(167, 149, 118);
+            border-radius: 20px;
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flexbox;
+            margin-right: 20px;
+            padding: 8px;
+            align-items: center; 
+        }
+h1{
+    color: rgba(225, 227, 228, 0.904);
+            background-color: rgb(41, 41, 41);
+            display: inline;
+            border: 5px ;
+            border-radius: 20px;
+            border-style: ridge;
+            border-color: rgb(74, 75, 75);
+            font-family:Verdana, Geneva, Tahoma, sans-serif
+
+}
+h3{
+    color: rgba(53, 35, 1, 0.863);
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    padding: 10px;
+    margin: 5px;
+}
+.one:hover{
+   background-color: rgb(5, 17, 119);
+}
+.two:hover{
+    background-color: snow;
+}
+   
