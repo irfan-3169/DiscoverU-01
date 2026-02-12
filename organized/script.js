@@ -1,7 +1,8 @@
 const supabaseUrl = "https://srkrfncvofpjpnhxrhju.supabase.co";
 const supabaseKey = "sb_publishable_lqV8MEW9zO_ILRc9T__SNg_Btqrbp7";
-const supabase= supabase.createclient(supabaseUrl,supabaseKey)
- document
+const supabaseClient = supabase.createClient(supabaseUrl, supabaseKey);
+
+document
   .getElementById("registerForm")
   .addEventListener("submit", async (e) => {
     e.preventDefault();
@@ -10,20 +11,21 @@ const supabase= supabase.createclient(supabaseUrl,supabaseKey)
     const email = document.getElementById("email").value;
     const age = document.getElementById("age").value;
     const gender = document.getElementById("gender").value;
-    [[]]
-    const file = document.getElementById("upload file").value;
     const courses = document.getElementById("courses").value;
 
-    // 1️⃣ Create Auth User (Supabase Auth)
+    // Create Auth User (Supabase Auth)
     const { data: authData, error: authError } =
-      await supabase.auth.signUp({
-        name: name,
+      await supabaseClient.auth.signUp({
         email: email,
-        age: age,
-        gender:gender,
-        file:file,
-        courses:courses
-
+        password: name,
+        options: {
+          data: {
+            name: name,
+            age: age,
+            gender: gender,
+            courses: courses
+          }
+        }
       });
 
     if (authError) {
@@ -31,25 +33,23 @@ const supabase= supabase.createclient(supabaseUrl,supabaseKey)
       return;
     }
 
-    // 2️⃣ Insert Extra User Info into Database
-    const { error: dbError } = await supabase
+    // Insert Extra User Info into Database
+    const { error: dbError } = await supabaseClient
       .from("users")
       .insert([
         {
-          id: authData.user.id, // link auth user
+          id: authData.user.id,
           name: name,
           email: email,
-           age: age,
-        gender:gender,
-        file:file,
-        courses:courses
-
+          age: age,
+          gender: gender,
+          courses: courses
         },
       ]);
 
     if (dbError) {
       alert(dbError.message);
     } else {
-      alert("Registration successful 🎉");
+      alert("Registration successful!");
     }
   });

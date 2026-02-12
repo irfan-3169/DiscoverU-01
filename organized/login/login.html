@@ -1,5 +1,5 @@
 <h1>login</h1>
-<form action="/login" method="post;get">
+<form id="loginForm" method="post">
     <label for="email">Email:</label>
     <input type="text" id="email" name="email" required placeholder="Enter your valid email">
 
@@ -8,7 +8,7 @@
 
     <button type="submit">Login</button>
 </form>
-<p>Don't have an account? <a href="E:\project .html\pro.html\courses\register form.html">Register here</a></p>
+<p>Don't have an account? <a href="../register/register form.html">Register here</a></p>
 
 <style>
     body {
@@ -16,8 +16,8 @@
         background-color: #d4d4d1;
         margin: 0;
         padding: 20px;
-        
-        
+
+
     }
 
     h1 {
@@ -25,7 +25,7 @@
        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         text-align: center;
         margin-top: 5%;
-    
+
     }
 
     form {
@@ -37,14 +37,14 @@
         margin: 100px;
         margin-left: 33%;
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        
+
     }
 
     label:hover {
         display:inline;
         margin-bottom: 8px;
         color: #302f0c;
-        
+
     }
 
     input[type="text"],
@@ -55,7 +55,7 @@
         border: 1px solid #302e2e;
         border-radius: 4px;
         align-content: left;
-       
+
     }
 
     button {
@@ -79,13 +79,20 @@
     a {
         color: #007bff;
         text-decoration: none;
-       
+
     }
-    
+
 
     a:hover {
         text-decoration:underline;
         color: #302f0c;
-        
+
     }
 </style>
+<script src="../router.js"></script>
+<script>
+document.getElementById("loginForm").addEventListener("submit", function(e) {
+    e.preventDefault();
+    window.location.href = "../home/index.html";
+});
+</script>
